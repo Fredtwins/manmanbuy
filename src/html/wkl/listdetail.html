@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>慢慢买首页</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/wkl/search.css">
+</head>
+
+<body>
+    <!-- 头部logo -->
+    <div class="wkl_header">
+        <div class="logo_left fl">
+            <a href="../../index.html">
+                <img src="../../../public/img/search.png" alt="">
+
+            </a>
+        </div>
+        <div class="logo_right fr ">
+            <a href="javascript:;">
+                <img src="../../../public/img/header_app.png" alt="">
+            </a>
+        </div>
+    </div>
+    <!-- 搜索框 -->
+    <form class="wkl_search" action="">
+        <div class="search_left fl">
+            <input value="" name="key" type="search" placeholder="请输入你想比价的商品">
+        </div>
+        <div class="search_right fl">
+            <input type="submit" value='搜索'>
+        </div>
+    </form>
+    <!-- 分页导航 -->
+    <div class="wkl_detail_nav">
+        <!--分页路径坑  -->
+    </div>
+    <!-- 商品内容商品详细信息tab栏 -->
+    <div class="wkl_detail_count">
+        <!--内容页坑  -->
+
+    </div>
+    <!-- 评论统计 -->
+    <div class="wkl_comment">
+        <div class="top">该商品的历史最低价：4599.00 ></div>
+        <div class="bottom"> * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。</div>
+    </div>
+
+    <!-- 优选评论 -->
+    <div class="wkl_goodcomment">
+        <div class="title">
+            优选网友评价
+        </div>
+        <div class="count">
+            <!--评论坑  -->
+            <ul class="count-list">
+
+
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- 底部 -->
+    <div class="wkl_footer">
+        <div class="footer_top clearfix">
+            <a href="javascript:;">注册</a>
+            <a href="javascript:;">登录</a>
+            <a class='footer_return' href="javascript:;">
+                <span class="glyphicon glyphicon-arrow-up"></span> 返回顶部
+            </a>
+        </div>
+        <div class="footer_bottom">
+            <p>
+                <a class='bottom_phone' href="javascript:;">手机APP下载</a>
+                <a href="javascript:;">慢慢买手机版 -- 掌上比价平台</a>
+            </p>
+            <p>
+                m.manmanbuy.com </p>
+        </div>
+    </div>
+
+    <!-- 其他 -->
+    <div class="wkl_other">
+        <a class="other_img" href="javascript:;">
+            <img src="../../../public/img/onther.png" alt="">
+        </a>
+    </div>
+    <div class="other_span">
+        <a ref="javascript:;">
+            <i class="iconfont">&#xe64a;</i>
+        </a>
+    </div>
+
+    <!--内容页模板  -->
+    <script type="text/template" id="wkl-article">
+        <div class="pic">
+            <a href="javascript:;">
+                <!-- <img src="../../../public/img/康佳.jpg" alt=""> -->
+                {{@productImg}}
+            </a>
+        </div>
+        <div class="tit">{{productName}}</div>
+        <div class="foot">
+            <span>当前最低<i> : ¥1899.00 </i></span>
+            <span>优选评论<i></i> : 3708条</span>
+        </div>
+        <div class="collect">
+            <a href="javascript">
+                <img src="../../../public/img/sc.jpg" alt="">
+            </a>
+        </div>
+        <div class="wkl_detail_tab" style="height:auto;background:#fff;">
+            <ul>
+                <li class="active">
+                    <a href="javascript:;">比价购买</a>
+                </li>
+                <li>
+                    <a href="javascript:;">产品参数</a>
+                </li>
+                <li>
+                    <a href="javascript:;">优选评价</a>
+                </li>
+            </ul>
+            <div>{{@bjShop}}</div>
+        </div>
+
+    </script>
+
+    <!--分页路径模板  -->
+    <script type="text/template" id="wkl-break">
+        <a href="./../../index.html">首页 ></a>
+        <a href="./searchlist.html?categoryId={{result[0].categoryId}}">{{result[0].category}}></a>
+        <a href="javascript:;">{{newStr}}</a>
+    </script>
+
+    <!--评论模板  -->
+    <script type="text/template" id="wkl-count">
+        {{each $data $value i}}
+        <li>
+            <div class="title1">
+                <p>{{$value.comName}}<span>{{$value.comTime}}</span></p>
+                <p>
+                    <i class="glyphicon glyphicon-star"></i>
+                    <i class="glyphicon glyphicon-star"></i>
+                    <i class="glyphicon glyphicon-star"></i>
+                    <i class="glyphicon glyphicon-star"></i>
+                    <i class="glyphicon glyphicon-star"></i>
+                    <span>{{$value.comFrom}}</span>
+                </p>
+            </div>
+            <div class="count-body">
+                {{$value.comContent}}
+            </div>
+        </li>
+        {{/each}}
+    </script>
+    <script src="../../js/lib.js"></script>
+    <script src="../../js/wkl/listdetail.js"></script>
+</body>
+
+</html>

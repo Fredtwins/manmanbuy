@@ -1,0 +1,260 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+p,
+textarea,
+select,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+}
+img {
+  vertical-align: middle;
+  border: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:link,
+a:visited,
+a:active,
+a:focus {
+  text-decoration: none;
+  color: #000;
+}
+ul,
+ol {
+  list-style: none;
+}
+input,
+select {
+  vertical-align: middle;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-size: 100%;
+}
+i {
+  font-style: normal;
+  text-decoration: none;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0;
+}
+.clearfix {
+  zoom: 1;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.al {
+  text-align: left;
+}
+.ac {
+  text-align: center;
+}
+.ar {
+  text-align: right;
+}
+.pr {
+  position: relative;
+}
+.pa {
+  position: absolute;
+}
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+.overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+  background-color: rgba(255, 250, 232, 0.2);
+  display: none;
+}
+.overlay img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 50px;
+  margin: -80px 0 0 -25px;
+}
+.wkl_header {
+  height: 50px;
+  border-bottom: 1px solid #e6e6e6;
+  background-color: #ff841d;
+  width: 100%;
+  line-height: 50px;
+}
+.wkl_header .logo_left {
+  padding-left: 12px;
+  width: 75%;
+  height: 100%;
+}
+.wkl_header .logo_left a {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+.wkl_header .logo_left a img {
+  height: 25px;
+  overflow: hidden;
+}
+.wkl_header .logo_right a img {
+  padding-right: 7px;
+  height: 34px;
+}
+.wkl_search {
+  width: 100%;
+  border-bottom: 1px solid #e6e6e6;
+  height: 52px;
+  padding: 10px;
+  position: relative;
+  background-color: White;
+}
+.wkl_search .search_left {
+  width: 100%;
+}
+.wkl_search .search_left input {
+  border: none;
+  background: #f1f1f1;
+  margin: 0px;
+  padding: 0px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 15px;
+  padding-left: 10px;
+  width: 90%;
+  padding-left: 5%;
+  font-size: 16px;
+}
+.wkl_search .search_right input {
+  width: 63px;
+  background: #ff841d;
+  color: #FFFFFF;
+  border: none;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 15px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 16px;
+}
+/*首页-品牌大全导航*/
+.pp-nav {
+  width: 100%;
+  height: 36px;
+  padding-left: 10px;
+  line-height: 36px;
+  background-color: #f1f1f1;
+  border-top: 2px solid #e6e6e6;
+  border-bottom: 1px solid #ccc;
+}
+.pp-nav a {
+  font-size: 14px;
+}
+/*热门品牌排行*/
+.hottop {
+  padding: 10px 6px 0;
+  background-color: #f2f2f2;
+}
+.hottop .header {
+  height: 40px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  font-size: 16px;
+  line-height: 40px;
+  color: #874604;
+  border: 1px solid #ccc;
+  background-color: #eee;
+}
+.hottop .brand-shop > li {
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #ccc;
+}
+.hottop .brand-shop > li > p {
+  float: left;
+}
+.hottop .brand-shop > li > span {
+  padding-top: 12px;
+  padding-right: 6px;
+  float: right;
+}
+.wkl_footer {
+  background: #efefef;
+  text-align: center;
+  font-size: 12px;
+  padding-top: 5px;
+  color: #666;
+}
+.wkl_footer .footer_top {
+  margin-top: 10px;
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+}
+.wkl_footer .footer_top a {
+  box-sizing: border-box;
+  float: left;
+  font-size: 14px;
+  border-right: 1px solid #c4c4c4;
+  text-align: center;
+  width: 33%;
+  height: 34px;
+  line-height: 34px;
+}
+.wkl_footer .footer_top .footer_return {
+  border-right: 0px solid #c4c4c4;
+}
+.wkl_footer .footer_bottom {
+  background: #efefef;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px 0;
+  color: #666;
+}
+.wkl_footer .footer_bottom .bottom_phone {
+  color: red;
+}

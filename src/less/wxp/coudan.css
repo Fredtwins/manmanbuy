@@ -1,0 +1,308 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+p,
+textarea,
+select,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+}
+img {
+  vertical-align: middle;
+  border: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:link,
+a:visited,
+a:active,
+a:focus {
+  text-decoration: none;
+  color: #000;
+}
+ul,
+ol {
+  list-style: none;
+}
+input,
+select {
+  vertical-align: middle;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-size: 100%;
+}
+i {
+  font-style: normal;
+  text-decoration: none;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0;
+}
+.clearfix {
+  zoom: 1;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.al {
+  text-align: left;
+}
+.ac {
+  text-align: center;
+}
+.ar {
+  text-align: right;
+}
+.pr {
+  position: relative;
+}
+.pa {
+  position: absolute;
+}
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+.overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+  background-color: rgba(255, 250, 232, 0.2);
+  display: none;
+}
+.overlay img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 50px;
+  margin: -80px 0 0 -25px;
+}
+/*页面顶栏*/
+.cd-hd {
+  height: 44px;
+  padding-top: 12px;
+  font-size: 20px;
+  color: #fff;
+  background-color: #ff8b00;
+}
+.cd-hd .back {
+  margin-left: 20px;
+  color: #fff;
+}
+.cd-hd .title {
+  margin-left: 33%;
+}
+/*顶部tab栏*/
+.tab-hd {
+  width: 100%;
+  height: 37px;
+  font-size: 16px;
+  line-height: 37px;
+  border-bottom: 1px solid #dadada;
+}
+.tab-hd > li {
+  float: left;
+  width: 30%;
+  height: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+.tab-hd > li > span {
+  font-size: 10px;
+}
+.tab-hd .last {
+  width: 10%;
+  text-align: center;
+  border-left: 1px solid #dadada;
+}
+.hotshop,
+.hotregion,
+.hotprice {
+  top: 37px;
+  left: 0;
+  width: 100%;
+  display: none;
+}
+.hotshop li,
+.hotregion li,
+.hotprice li {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  padding-left: 10px;
+  font-size: 16px;
+  line-height: 40px;
+  background-color: #fff;
+  border-bottom: 1px solid #dadada;
+}
+.hotshop li span,
+.hotregion li span,
+.hotprice li span {
+  position: absolute;
+  top: 10px;
+  right: 18px;
+  font-size: 14px;
+  color: #ff4400;
+}
+.searchbox {
+  top: 37px;
+  left: 0;
+  width: 100%;
+  display: none;
+  padding: 10px;
+  background-color: #f7f7f7;
+}
+.searchbox .search {
+  width: 100%;
+}
+.searchbox .search .sea-frame {
+  width: 88%;
+  text-indent: 20px;
+}
+.searchbox .search .sea-txt {
+  width: 30px;
+  margin: 4px 0 0 8px;
+}
+.searchbox .search .icon {
+  top: 18px;
+  left: 18px;
+  color: #dadada;
+}
+.searchbox .rank,
+.searchbox .classify {
+  font-size: 12px;
+}
+.searchbox .rank p,
+.searchbox .classify p {
+  margin: 20px 0 10px;
+}
+.searchbox .rank input,
+.searchbox .classify input {
+  font-size: 12px;
+  width: 24%;
+  height: 30px;
+  margin-bottom: 10px;
+  background-color: #f7f7f7;
+}
+/*商品列表*/
+.coudan-productlist {
+  background-color: #f1f1f1;
+  padding: 10px 6px 0;
+}
+.coudan-productlist .list {
+  width: 100%;
+  margin: 0 auto;
+}
+.coudan-productlist .list > li {
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+.coudan-productlist .list > li > a {
+  margin: 4px;
+  display: block;
+  background-color: #fff;
+}
+.coudan-productlist .list .pic {
+  width: 100%;
+  height: 193px;
+  overflow: hidden;
+}
+.coudan-productlist .list .text {
+  width: 100%;
+  color: #333333;
+  word-break: break-all;
+  padding: 0 6px;
+  height: 14px;
+  overflow: hidden;
+  font-size: 12px;
+  margin-top: 10px;
+  line-height: 14px;
+  font-weight: normal;
+  text-align: left;
+  margin-top: 6px;
+}
+.coudan-productlist .list .price {
+  padding: 0 6px;
+  color: #f8601d;
+  font-size: 20px;
+  text-align: left;
+}
+.wkl_footer {
+  background: #efefef;
+  text-align: center;
+  font-size: 12px;
+  padding-top: 5px;
+  color: #666;
+}
+.wkl_footer .footer_top {
+  margin-top: 10px;
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+}
+.wkl_footer .footer_top a {
+  box-sizing: border-box;
+  float: left;
+  font-size: 14px;
+  border-right: 1px solid #c4c4c4;
+  text-align: center;
+  width: 33%;
+  height: 34px;
+  line-height: 34px;
+}
+.wkl_footer .footer_top .footer_return {
+  border-right: 0px solid #c4c4c4;
+}
+.wkl_footer .footer_bottom {
+  background: #efefef;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px 0;
+  color: #666;
+}
+.wkl_footer .footer_bottom .bottom_phone {
+  color: red;
+}

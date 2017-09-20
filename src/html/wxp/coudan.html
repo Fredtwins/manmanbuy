@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <title>凑单品--慢慢买比价网</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/wxp/coudan.css">
+</head>
+<body>
+    <div class="wxp-coudan-view">
+        <!--页面顶栏-->
+        <div class="cd-hd container">
+            <div class="row clearfix">
+                <a class="glyphicon glyphicon-menu-left fl back" href="../../index.html"></a>
+                <h3 class="fl title">凑单品</h3>
+            </div>
+        </div>
+        <!--顶部tab栏-->
+        <div class="coudan-tab pr">
+            <ul class="tab-hd clearfix">
+                <li>
+                    <a id="shopevent" href="javascript:;">京东</a>
+                    <span class="glyphicon glyphicon-triangle-bottom"></span>
+                </li>
+                <li>
+                    <a id="regionevent" href="javascript:;">华北</a>
+                    <span class="glyphicon glyphicon-triangle-bottom"></span>
+                </li>
+                <li>
+                    <a id="allprice" href="javascript:;">全部价格</a>
+                    <span class="glyphicon glyphicon-triangle-bottom"></span>
+                </li>
+                <li class="btn-search last">
+                    <a class="glyphicon glyphicon-search" href="javascript:;"></a>
+                </li>
+            </ul>
+            <!--隐藏下拉框-->
+            <div id="shopName" class="hotshop pa">
+                <!--店铺名下拉模板坑位-->
+            </div>
+            <div id="regionName" class="hotregion pa">
+                <!--区域名下拉模板坑位-->
+            </div>
+            <div class="hotprice pa">
+                <ul>
+                    <li>1元</li>
+                    <li>3元</li>
+                    <li>9元</li>
+                    <li>19元</li>
+                </ul>
+            </div>
+            <div class="searchbox pa">
+                <div class="search clearfix">
+                    <input class="sea-frame form-control input-sm fl pr" type="text" placeholder="搜索您想要的凑单品">
+                    <a class="fl sea-txt" href="javascript:;">搜索</a>
+                    <span class="icon pa glyphicon glyphicon-search"></span>
+                </div>
+                <div class="rank">
+                    <p>排序</p>
+                    <input class="btn btn-default" type="button" value="销量">
+                    <input class="btn btn-default" type="button" value="价格↑">
+                    <input class="btn btn-default" type="button" value="价格↓">
+                </div>
+                <div class="classify">
+                    <p>分类</p>
+                    <input class="btn btn-default" type="button" value="全部">
+                    <input class="btn btn-default" type="button" value="家居">
+                    <input class="btn btn-default" type="button" value="数码">
+                    <input class="btn btn-default" type="button" value="办公">
+                    <input class="btn btn-default" type="button" value="个护">
+                    <input class="btn btn-default" type="button" value="食品">
+                    <input class="btn btn-default" type="button" value="母婴">
+                    <input class="btn btn-default" type="button" value="服饰">
+                </div>
+            </div>
+        </div>
+        <!--商品列表-->
+        <div class="coudan-productlist">
+            <ul id="cd-productlist" class="list clearfix">
+            <!--商品列表模板坑位-->
+            </ul>
+        </div>
+        <!--底部-->
+        <!--build:footer-->
+        <!--endbuild-->
+    </div>
+
+
+    <script src="../../js/lib.js"></script>
+    <script src="../../js/wxp/coudan.js"></script>
+
+    <!--店铺名下拉模板渲染-->
+<script id="shopName-tpl" type="text/tpl">
+    <ul>
+        {{each $data shop i}}
+        <li data-id="{{shop.shopId}}">{{shop.shopName}}</li>
+        {{/each}}
+    </ul>
+</script>
+
+    <!--区域名下拉模板渲染-->
+<script id="regionName-tpl" type="text/tpl">
+    <ul>
+        {{each $data area i}}
+        <li data-id="{{area.areaId}}">{{area.areaName}}</li>
+        {{/each}}
+    </ul>
+</script>
+
+    <!--产品列表模板渲染-->
+<script id="productlist-tpl" type="text/tpl">
+        {{each $data product i}}
+        <li>
+            <a href="javascript:;">
+                <img class="pic" src="{{product.productImg}}" alt="">
+                <p class="text">{{product.productName}}</p>
+                <p class="price">{{product.productPrice}}</p>
+            </a>
+        {{/each}}
+        </li>
+</script>
+</body>
+</html>

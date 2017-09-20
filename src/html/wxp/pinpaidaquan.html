@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <title>慢慢买比价网--手机版</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/wxp/pinpaidaquan.css">
+</head>
+
+<body>
+    <div class="wxp-pinpai-view">
+        <!--预留公用头部-->
+        <!--build:header-->
+        <!--endbuild-->
+        <!--首页-品牌大全导航-->
+        <div class="pp-nav">
+            <a href="../../index.html">首页</a> &lt;
+            <a>品牌大全</a>
+        </div>
+        <!--热门排行-->
+        <div class="hottop">
+            <div class="header">
+                热门品牌排行
+            </div>
+            <ul id="brand" class="brand-shop">
+                <!--品牌展示模板坑位-->
+            </ul>
+        </div>
+
+        <!--预留公用底部-->
+        <!--build:footer-->
+        <!--endbuild-->
+    </div>
+
+    <script src="../../js/lib.js"></script>
+    <script src="../../js/wxp/pinpaidaquan.js"></script>
+
+
+    <!--品牌展示模板-->
+    <script id="hottop-tpl" type="text/tpl">
+        {{each $data brand i}}
+        <li class="clearfix" data-id="{{brand.brandTitleId}}">
+            <p>{{brand.brandTitle}}</p>
+            <span class="glyphicon glyphicon-menu-down"></span>
+        </li>
+        {{/each}}
+    </script>
+</body>
+
+</html>

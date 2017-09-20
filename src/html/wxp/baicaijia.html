@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <title>白菜价优惠券-每天千款优惠券秒杀，一折限时疯抢！</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/wxp/baicai.css">
+</head>
+<body>
+    <div class="wxp-baicai-view">
+        <!--页面顶栏-->
+        <div class="cd-hd container">
+            <div class="row clearfix">
+                <a class="glyphicon glyphicon-menu-left fl back" href="../../index.html"></a>
+                <h3 class="fl title">白菜价-淘宝内部券</h3>
+            </div>
+        </div>
+        <!--顶部tab栏-->
+        <div class="top-tab">
+            <div id="wrapper">
+                <!--顶栏分类模板-->
+            </div>
+        </div>
+        <!--商品列表-->
+        <div id="bc-productlist" class="baicai-productlist">
+            <!--商品列表模板坑位-->
+        </div>
+        <!--底部-->
+        <!--build:footer-->
+        <!--endbuild-->
+    </div>
+    <script src="../../js/lib.js"></script>
+    <script src="../../js/wxp/baicai.js"></script>
+
+    <!--顶栏分类名-->
+<script id="top-tab-tpl" type="text/tpl">
+    <ul class="list clearfix">
+        {{each $data title i}}
+        <li data-id="{{title.titleId}}">{{title.title}}</li>
+        {{/each}}
+    </ul>
+</script>
+    <!--商品列表模板-->
+<script id="bc-productlist-tpl" type="text/tpl">
+    <ul class="list">
+        {{each $data product i}}
+        <li class="clearfix">
+            {{@product.productImg}}
+            <div class="explain fl">
+                <div class="title">
+                    {{@product.productName}}
+                </div>
+                <div class="price">
+                    {{@product.productPrice}}
+                </div>
+                <div class="schedule">
+                    {{@product.productCouponRemain}}
+                </div>
+                <div class="coupon clearfix">
+                    {{@product.productCoupon}}
+                    <div class="link">
+                        {{@product.productHref}}
+                    </div>
+                </div>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+</script>
+</body>
+</html>

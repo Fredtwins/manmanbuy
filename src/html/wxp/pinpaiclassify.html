@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <title>慢慢买比价网--手机版</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/wxp/pinpaiclassify.css">
+</head>
+<body>
+<div class="wxp-pinpai-view">
+    <!--预留公用头部-->
+    <!--build:header-->
+    <!--endbuild-->
+    <!--首页-品牌大全导航-->
+    <div class="pp-nav">
+        <a href="../../index.html">首页</a>
+        &lt;
+        <a href="pinpaidaquan.html">品牌大全</a>
+        &lt;
+        <a href="javascript:;" class="categoryname"></a>
+    </div>
+    <!--热门排行-->
+    <div class="main">
+        <div class="hottop">
+            <div class="topheader">
+                热门品牌排行
+            </div>
+            <ul id="brand-classify" class="classify-shop">
+                <!--品牌展示模板坑位-->
+            </ul>
+        </div>
+        <div class="hotsales">
+            <div class="salesheader">
+                销量排行
+            </div>
+            <ul id="brand-childs" class="childs-shop">
+                <!--品牌子类模板坑位-->
+            </ul>
+        </div>
+        <div class="hotcomment">
+            <div class="commentheader">
+                最有用的用户评论
+            </div>
+            <ul id="brand-comment" class="comment-shop">
+                <!--评论模板坑位-->
+                <li>
+                    <div class="com-hd clearfix">
+                        <img src="http://www.zuyushop.com/ProPic/20177/small80/Thumb_2017070015064524466.png" alt="">
+                        <div class="tradename">大法师覅大佛到发的覅爱哦地方hi瓯海回复第瓯海佛打</div>
+                    </div>
+                    <div class="remark">
+                        <div class="remark-hd">
+                            <span class="name">name:</span>
+                            <span class="lv">
+                                <i class="glyphicon glyphicon-star"></i>
+                                <i class="glyphicon glyphicon-star"></i>
+                                <i class="glyphicon glyphicon-star"></i>
+                                <i class="glyphicon glyphicon-star"></i>
+                                <i class="glyphicon glyphicon-star"></i>
+                            </span>
+                            <span class="time">2014/14/5</span>
+                        </div>
+                        <p>发ID金佛我奥迪φ风景地阿娇覅偶打算简欧风景地阿斯见覅</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!--预留公用底部-->
+    <!--build:footer-->
+    <!--endbuild-->
+</div>
+
+<script src="../../js/lib.js"></script>
+<script src="../../js/wxp/pinpaiclassify.js"></script>
+
+
+
+<!--品牌展示模板-->
+<script id="brand-classify-tpl" type="text/tpl">
+    {{each $data classify i}}
+    <li class="clearfix" data-id="{{classify.brandTitleId}}">
+        <div class="diamonds num{{i<3?i+1:null}}">{{i+1}}</div>
+        <div class="explain">
+            <p class="title">{{classify.brandName}}</p>
+            <p class="sales">{{classify.brandInfo}}</p>
+        </div>
+    </li>
+    {{/each}}
+</script>
+
+<!--品牌子类模板-->
+<script id="brand-childs-tpl" type="text/tpl">
+    {{each $data child i}}
+    <li class="clearfix" data-id="{{child.productId}}">
+        {{@child.productImg}}
+        <div class="explain">
+            <div class="title">{{child.productName}}</div>
+            <div class="price clearfix">
+                <span class="fl">{{child.productPrice}}</span>
+                <span class="fr lv">
+                    <i class="glyphicon glyphicon-star"></i>
+                    <i class="glyphicon glyphicon-star"></i>
+                    <i class="glyphicon glyphicon-star"></i>
+                    <i class="glyphicon glyphicon-star"></i>
+                    <i class="glyphicon glyphicon-star"></i>
+                </span>
+            </div>
+            <div class="comment">
+                <span>{{child.productQuote}}</span>
+                <span>{{child.productCom}}</span>
+            </div>
+        </div>
+    </li>
+    {{/each}}
+</script>
+
+<!--评论模板-->
+<script id="comment-tpl" type="text/html">
+    {{each $data com i}}
+    <li>
+        <div class="com-hd clearfix">
+            <img src="http://www.zuyushop.com/ProPic/20177/small80/Thumb_2017070015064524466.png" alt="">
+            <div class="tradename">{{com.comFrom}}</div>
+        </div>
+        <div class="remark">
+            <div class="remark-hd">
+                <span class="name">{{com.comName}}:</span>
+                            <span class="lv">
+                                <i class="glyphicon glyphicon-star"></i>
+                                <i class="glyphicon glyphicon-star"></i>
+                                <i class="glyphicon glyphicon-star"></i>
+                                <i class="glyphicon glyphicon-star"></i>
+                                <i class="glyphicon glyphicon-star"></i>
+                            </span>
+                <span class="time">{{com.comTime}}</span>
+            </div>
+            <p>{{com.comContent}}</p>
+        </div>
+    </li>
+    {{/each}}
+</script>
+</body>
+</html>

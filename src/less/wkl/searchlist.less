@@ -1,0 +1,68 @@
+// 商品列表-媒体对象
+.wkl-product-list {
+    padding-top: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 15px;
+    .media {
+        margin-bottom: 26px;
+        img {
+            width: 100px;
+            height: 100px;
+        }
+        .media-body {
+            position: relative;
+            h4 {
+                display: inline-block;
+            }
+            span {
+                   color: #ed0000;
+                   display: block;
+                   margin-top:10px;
+                    font-size: 18px;
+            }
+            .media-supple {
+                position: absolute;
+                width: 100%;
+                bottom: 0;
+                span,
+                a {
+                    font-size: 12px;
+                    color: #a1a1a1;
+                }
+            }
+        }
+    }
+}
+
+// 分页
+.wkl-page {
+    margin: 0 auto;
+    padding: 12px 0;
+    background: #f2f2f2;
+    a {
+        background-image: linear-gradient(to bottom, #eeeeee, #d5d5d5);
+    }
+    select {
+        height: 34px;
+        padding-left: 15px;
+    }
+}
+
+// 面包屑路径
+.wkl_bread{
+  padding: 0;
+  // 覆盖bootstrap的"/"
+  .breadcrumb > li + li:before{
+    padding: 0 5px;
+    color: #ccc;
+    content: ">";
+  }
+  ol{
+    // 径向渐变
+    background: linear-gradient(to bottom,#fff,#ededed);
+    border-radius: 0;
+    border-bottom: 1px solid #c7c7c7;
+    margin-bottom: 0;
+  }
+}

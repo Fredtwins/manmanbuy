@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>慢慢买首页</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/wkl/search.css">
+</head>
+
+<body>
+    <!-- 头部logo -->
+    <div class="wkl_header">
+        <div class="logo_left fl">
+            <a href="../../index.html">
+                <img src="../../../public/img/search.png" alt="">
+
+            </a>
+        </div>
+        <div class="logo_right fr ">
+            <a href="javascript:;">
+                <img src="../../../public/img/header_app.png" alt="">
+            </a>
+        </div>
+    </div>
+    <!-- 搜索框 -->
+    <form class="wkl_search" action="">
+        <div class="search_left fl">
+            <input value="" name="key" type="search" placeholder="请输入你想比价的商品">
+        </div>
+        <div class="search_right fl">
+            <input type="submit" value='搜索'>
+        </div>
+    </form>
+    <!-- 列表数据 -->
+    <div class="wkl_list">
+        <!--列表和子类坑  -->
+
+    </div>
+
+    <!-- 底部 -->
+    <div class="wkl_footer">
+        <div class="footer_top clearfix">
+            <a href="javascript:;">注册</a>
+            <a href="javascript:;">登录</a>
+            <a class='footer_return' href="javascript:;">
+                <span class="glyphicon glyphicon-arrow-up"></span> 返回顶部
+            </a>
+        </div>
+        <div class="footer_bottom">
+            <p>
+                <a class='bottom_phone' href="javascript:;">手机APP下载</a>
+                <a href="javascript:;">慢慢买手机版 -- 掌上比价平台</a>
+            </p>
+            <p>
+                m.manmanbuy.com </p>
+        </div>
+    </div>
+
+    <!-- 其他 -->
+    <div class="wkl_other">
+        <a class="other_img" href="javascript:;">
+            <img src="../../../public/img/onther.png" alt="">
+        </a>
+    </div>
+    <div class="other_span">
+        <a ref="javascript:;">
+            <i class="iconfont">&#xe64a;</i>
+        </a>
+    </div>
+
+    <!-- 分类导航模板 -->
+    <script id='list_box_tpl' type='text/template'>
+        {{ each $data $value i }}
+        <div data-titleId="{{ $value.titleId }}" class="list_box">
+            <a href="javascript:;">
+                {{$value.title}}
+                <span class="glyphicon glyphicon-menu-down"></span>
+                <span class="glyphicon glyphicon-menu-up hide"></span>
+            </a>
+
+        </div>
+        {{ /each }}
+    </script>
+
+    <script type="text/template" id="list-child">
+        <table class="list_tab">
+            <tr>
+                {{each $data childs i}}
+                <td data-id="{{childs.categoryId}}"><a href="javascript:;">{{childs.category}}</a></td>
+                {{/each}}
+            </tr>
+        </table>
+    </script>
+
+
+
+    <script src="../../js/lib.js"></script>
+    <script src="../../js/wkl/search.js"></script>
+</body>
+
+</html>

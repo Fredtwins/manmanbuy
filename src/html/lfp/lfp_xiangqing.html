@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>国内折扣</title>
+
+    <!-- Bootstrap -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/lfp/lfp_xiangqing.css">
+
+
+
+
+</head>
+
+<body>
+    <!--头部  -->
+    <div class="lfp_head">
+        <div class="back">
+            <a href="../lfp/lfp_zhekou.html" class="glyphicon glyphicon-menu-left pull-left left-icon"></a>
+        </div>
+        <p class="title">国内折扣</p>
+
+        <a href="#" class="icon-app">
+            <img class="appdown" src="../../../public/img/header_app.png" alt="">
+        </a>
+    </div>
+
+
+    <form action="zhekou.aspx?id=1986019" id="aspnetForm" name="aspnetForm" method="post">
+        <!--大的盒子装  -->
+        <div class="container">
+            <!--详情上半部分  -->
+            <div class="cu-content">
+                <!--模板  -->
+                <!--商家和时间  -->
+                <!--详情加图片  -->
+                <!-- <h3>LLUMAR 龙膜 悦动75+A全车膜 隔热太阳膜 *2件</h3>
+                <h4>1898元包邮</h4>
+               
+                <div class="info">
+                    <span class="one">天猫商城</span>
+                    <span class="two">06-16 19:19</span>
+                    <span class="three">板砖在手,天下我有/慢慢买</span>
+                </div>
+                
+                <div class="content clearfix">
+                    <div class="pic">
+                        <img src="../../../public/img/che.jpg" alt="">
+                    </div>
+                    <div class="conn">天猫店铺现售价为1898元，可参加17日10点的前50名半价活动，感兴趣的慢友可以多关注。</div>
+                </div> -->
+                <!--前往购买  -->
+                <div class="golink">
+                    <a href="javascript:;">
+                        <i class="icon-gobuy">前往购买</i>
+                    </a>
+                </div>
+            </div>
+            <!--发表评论  -->
+            <div class="cu-content-pl ui-border-t">
+                <!--发表评论的字  -->
+                <div class="tit">发表文字</div>
+                <!--评论内容  -->
+                <div class="repla">
+                    <div class="form">
+                        <textarea name="ctl00$ContentBody$txt_nr" id="ctl00_ContentBody_txt_nr" cols="30" rows="3"></textarea>
+                    </div>
+                    <div class="ctrl">
+                        <input type="submit" name="ctl00$ContentBody$Button1" value="发表评论" id="ctl00_ContentBody_Button1" class="cjdp">
+                    </div>
+                </div>
+                <!--最新评论  -->
+                <div class="tit">最新评论</div>
+                <!--标签  -->
+                <div style="font-size:14px;padding:20px 10px 0;color:#808080;">
+                    标签
+                    <a style="color:#808080" href="">哈哈</a>
+                    <a style="color:#808080" href="">吼吼</a>
+                    <a style="color:#808080" href="">嘻嘻</a>
+                    <a style="color:#808080" href="">嘿嘿</a>
+                </div>
+            </div>
+            <!--最新评论  -->
+            <div style="font-size:14px;padding:20px 10px 0;color:#808080;">
+
+            </div>
+        </div>
+
+    </form>
+
+
+    <!--面包屑路径  -->
+    <div class='container-fluid lfp_bread'>
+        <ol class="breadcrumb">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">详情</a></li>
+        </ol>
+    </div>
+    <!--登录注册返回首页  -->
+    <div class="container lfp-user-toolbar">
+        <!--bootstrap按钮组  -->
+        <div class="btn-group btn-group-justified" role="group" aria-label="...">
+            <div class="btn-group" role="group">
+                <a type="button" class="btn btn-default">登录</a>
+            </div>
+            <div class="btn-group" role="group">
+                <a type="button" class="btn btn-default">注册</a>
+            </div>
+            <div class="btn-group" role="group">
+                <a id="ren" href="#" type="button" class="btn btn-default"><i class="glyphicon glyphicon-plane"></i>&nbsp;返回顶部</a>
+            </div>
+        </div>
+    </div>
+    <!--底部  -->
+    <footer class="container-fluid ">
+        <p class="text-center">
+            <a href="javascript:;">手机APP下载</a>
+            <a href="javascript:;">慢慢买手机版</a> -- 掌上比价平台
+        </p>
+        <p class="text-center">m.manmanbuy.com</p>
+
+
+
+        <!--模板  -->
+        <script id="lfp_xq" type="text/template">
+            {{each $data $value i}}
+            <h3>{{$value.productName}}</h3>
+            <h4>{{$value.productPrice}}</h4>
+            <!--商家和时间  -->
+            <div class="info">
+                <span class="one">{{$value.productFrom}}</span>
+                <span class="two">{{$value.productTime}}</span>
+                <span class="three">{{$value.productTips}}</span>
+            </div>
+            <!--详情加图片  -->
+            <div class="content clearfix">
+                <div class="pic">
+                    <!-- <img src="{{@$value.productImg}}" alt=""> -->
+                    {{@$value.productImg}}
+                </div>
+                <div class="conn">{{$value.productInfo}}</div>
+            </div>
+            {{/each}}
+        </script>
+        <script src="../../js/lib.js"></script>
+        <!-- <script src="../../js/lfp/commons.js"></script> -->
+        <script src="../../js/lfp/lfp_xiangqing.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>商城导航</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/zwf/zwf.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!--工具栏  -->
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 zwf-toolbar">
+                <a href="./../../index.html" class="glyphicon glyphicon-menu-left pull-left left-icon"></a>
+                <h2>商城导航</h2>
+                <a href="javascript:;"><img src="../../../public/img/header_app.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+
+    <!--商城导航列表  -->
+    <div class="container zwf-coupon zwf-shop-navigation">
+        <div class="row">
+            <!--商城导航坑  -->
+        </div>
+    </div>
+
+    <!--面包屑路径  -->
+    <div class='container-fluid zwf_bread'>
+        <ol class="breadcrumb">
+            <li><a href="./../../index.html">首页</a></li>
+            <li><a href="javascript:;">商城导航</a></li>
+        </ol>
+    </div>
+    <!--登录注册返回首页  -->
+    <div class="container zwf-user-toolbar">
+        <!--bootstrap按钮组  -->
+        <div class="btn-group btn-group-justified" role="group" aria-label="...">
+            <div class="btn-group" role="group">
+                <a type="button" class="btn btn-default">登录</a>
+            </div>
+            <div class="btn-group" role="group">
+                <a type="button" class="btn btn-default">注册</a>
+            </div>
+            <div class="btn-group" role="group">
+                <a type="button" class="btn btn-default footer_return"><i class="glyphicon glyphicon-arrow-up"></i>&nbsp;返回顶部</a>
+            </div>
+        </div>
+    </div>
+    <!--底部  -->
+    <footer class="container-fluid ">
+        <p class="text-center">
+            <a href="javascript:;">手机APP下载</a>
+            <a href="javascript:;">慢慢买手机版</a> -- 掌上比价平台
+        </p>
+        <p class="text-center">m.manmanbuy.com</p>
+    </footer>
+    <!--商城导航模板  -->
+    <script type="text/template" id="zwf_navigation">
+        {{each $data}}
+        <div class="col-xs-4 text-center kfc">
+            <div class="thumbnail">
+                <a href="{{$value.navHref}}" target='_blank'>
+                    <img src="{{$value.navImg}}" alt="{{$value.navTitle}}">
+                    <span>{{$value.navTitle}}</span>
+                </a>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+    <script src="../../js/lib.js"></script>
+    <script src="../../js/zwf/HzSite.js"></script>
+</body>
+
+</html>
